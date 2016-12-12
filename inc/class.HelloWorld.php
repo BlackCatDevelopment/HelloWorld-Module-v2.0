@@ -23,15 +23,15 @@ if (!class_exists('HelloWorld', false))
 		/**
 		 * @var void
 		 */
-		protected $name			= 'HelloWorld';
-		protected $directory	= 'helloworld';
-		protected $version		= '0.1';
-		protected $author		= 'BlackCat Development';
-		protected $license		= 'GNU General Public License';
-		protected $description	= 'Hello World Module of BlackCat 2.0';
-		protected $guid			= '66e8f438-680d-4fab-b236-a577edce6231';
-		protected $home			= 'https://github.com/BlackCatDevelopment/HelloWorld';
-		protected $platform		= '2.x';
+		protected static $name			= 'HelloWorld';
+		protected static $directory		= 'helloworld';
+		protected static $version		= '0.1';
+		protected static $author		= 'BlackCat Development';
+		protected static $license		= 'GNU General Public License';
+		protected static $description	= 'Hello World Module of BlackCat 2.0';
+		protected static $guid			= '66e8f438-680d-4fab-b236-a577edce6231';
+		protected static $home			= 'https://github.com/BlackCatDevelopment/HelloWorld';
+		protected static $platform		= '2.x';
 
 		public function __construct()
 		{
@@ -42,20 +42,19 @@ if (!class_exists('HelloWorld', false))
 			parent::__destruct();
 		}
 
-
-        public static function getInstance()
-        {
-            if (!self::$instance)
-            {
-                self::$instance = new self();
-            }
-            return self::$instance;
-        }
+		public static function getInstance()
+		{
+			if (!self::$instance)
+			{
+				self::$instance = new self();
+			}
+			return self::$instance;
+		}
 
 		/**
 		 *
 		 */
-		public function add()
+		public static function add()
 		{
 			// TODO: implement here
 			echo 'called add<br>';
@@ -65,7 +64,7 @@ if (!class_exists('HelloWorld', false))
 		/**
 		 *
 		 */
-		public function remove()
+		public static function remove()
 		{
 			// TODO: implement here
 			return self::$instance;
@@ -74,7 +73,7 @@ if (!class_exists('HelloWorld', false))
 		/**
 		 *
 		 */
-		public function view()
+		public static function view()
 		{
 			// TODO: implement here
 			echo 'called view<br>';
@@ -84,7 +83,7 @@ if (!class_exists('HelloWorld', false))
 		/**
 		 *
 		 */
-		public function save()
+		public static function save()
 		{
 			// TODO: implement here
 		}
@@ -92,7 +91,7 @@ if (!class_exists('HelloWorld', false))
 		/**
 		 *
 		 */
-		public function modify()
+		public static function modify()
 		{
 			// TODO: implement here
 		}
@@ -121,11 +120,10 @@ if (!class_exists('HelloWorld', false))
 			// TODO: implement here
 		}
 
-
 		/**
 		 *
 		 */
-		public function customFunction()
+		public static function customFunction()
 		{
 			// TODO: implement here
 			return self::$instance;
