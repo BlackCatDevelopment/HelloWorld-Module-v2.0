@@ -15,9 +15,9 @@
 
 */
 
-if (!class_exists('HelloWorld', false))
+if (!class_exists('CAT_Addon_HelloWorld', false))
 {
-	class HelloWorld extends CAT_Module_Page
+	class CAT_Addon_HelloWorld extends CAT_Addon_Page
 	{
 		protected $instance = NULL;
 		/**
